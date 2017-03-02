@@ -13,7 +13,13 @@ namespace RetailCustomers.Controllers
     public class CustomersController : Controller
     {
         private CustomersModel db = new CustomersModel();
-
+           [HandleError]
+        // GET: Home
+        public ActionResult Home()
+        {
+            return View();
+        }
+    
         // GET: Customers
         public ActionResult Index()
         {
